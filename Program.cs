@@ -25,6 +25,7 @@ namespace LinkedList
                 Console.WriteLine("6.searchvalue");
                 Console.WriteLine("7.Size");
                 Console.WriteLine("8.Push");
+                Console.WriteLine("9.Pop");
                 Console.WriteLine("Enter The Option:");
                 int option = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("");
@@ -76,9 +77,10 @@ namespace LinkedList
                         linkedList.Size();
                         break;
                     case 8:
-                        stack.Push(10);
-                        stack.Push(20);
-                        stack.Push(30);
+                        //stack.Push(10);
+                        //stack.Push(20);
+                        //stack.Push(30);
+                        stack.Pop();
                         stack.Display();
                         break;
                     case 9:
