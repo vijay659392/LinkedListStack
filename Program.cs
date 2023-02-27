@@ -8,6 +8,7 @@ namespace LinkedList
 {
     internal class Program
     {
+        private static object queue;
         static void Main(string[] args)
         {
             bool flag = true;
@@ -26,6 +27,7 @@ namespace LinkedList
                 Console.WriteLine("7.Size");
                 Console.WriteLine("8.Push");
                 Console.WriteLine("9.Pop");
+                Console.WriteLine("10.queue");
                 Console.WriteLine("Enter The Option:");
                 int option = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("");
@@ -64,7 +66,9 @@ namespace LinkedList
                     case 6:
                         linkedList.Add(56);
                         linkedList.Add(30);
-                        linkedList.Add(70);                      
+                        linkedList.Add(70);
+                        linkedList.SearchValue(10);
+                        linkedList.Display();
                         break;
                     case 7:
                         linkedList.Add(56);
@@ -84,7 +88,14 @@ namespace LinkedList
                         stack.Display();
                         break;
                     case 9:
-                         linkedList.Display();           
+                        object value = queue.Enqueue(10);
+                        queue.Enqueue(20);
+                        queue.Enqueue(30);
+                        queue.Enqueue(45);
+                        break;
+                    case 10:
+                        //linkedList.Display();
+                        queue.Display();
                         break;
                     default:
                         Console.WriteLine("Please Enter Current Value");
