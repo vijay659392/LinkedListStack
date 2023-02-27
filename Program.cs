@@ -94,6 +94,9 @@ namespace LinkedList
                         queue.Enqueue(45);
                         break;
                     case 10:
+                        queue.Dequeue();
+                        break;
+                    case 11:
                         //linkedList.Display();
                         queue.Display();
                         break;

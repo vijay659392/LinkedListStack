@@ -32,7 +32,28 @@ namespace LinkedList
                 tail = node;
             }
             Console.WriteLine($"\n{data} is added in queue");
+        }
+        public void Dequeue()
+        {
+            if (tail != null)
+            {
+                if (tail.Next == null)
+                {
+                    tail = null;
+                }
+                else
+                {
+                    Node temp = tail;
+                    while (temp.Next.Next != null)
+                    {
+                        temp = temp.Next;
+                    }
+                    temp.Next = null;
+                    front = temp;
+                }
+            }
 
+            Display();
 
         }
 
